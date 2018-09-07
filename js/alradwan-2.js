@@ -5,23 +5,10 @@ $(document).ready(function(e) {
 	  
 	  });
 })
-
-
-	$(" .navbar-collapse .an-bars").click(function(){
-		$(".therightbar").fadeIn(1000);
-		
-	});
-	$(" .navbar-toggle").click(function(){
-		$(".therightbar").fadeIn(1000);
-		
-	});
-		$(" .therightbar .close").click(function(){
-		$(".therightbar").fadeOut(1000);
-		
-	});
 	$(window).load(function(){
 	$(".loading").fadeOut(2000);
 });
+
 //products 
 $(".byadli ").click(function(){
 	 $(this).addClass("active-products");
@@ -82,36 +69,3 @@ $(".byadli ").click(function(){
 	
 	
 	});
-	
-
-	  /// navbar hover
-	$(window).scroll(function(){
-		
-
-		
-		if($(this).scrollTop()> 100){
-			$(".my-navbar .navbar").css({"background-color":"#FFF"});
-			$(".my-navbar .navbar-default .navbar-nav > li > a").css({"color":"inherit"});
-			$(".my-navbar .navbar-default .navbar-nav > li > a").hover(function(){ $(this).css({"color":"#fcc121"})},function(){$(this).css({"color":"inherit"})});
-         
-				
-		}else{
-			$(".my-navbar .navbar").css({"background-color":"inherit"});
-			$(".my-navbar .navbar-default .navbar-nav > li > a").css({"color":"#FFF"});
-			$(".my-navbar .navbar-default .navbar-nav > li > a").hover(function(){ $(this).css({"color":"#fcc121"})},function(){$(this).css({"color":"#FFF"})});
-			
-		}
-		$(".my-block").each(function() {
-			if($(window).scrollTop()>$(this).offset().top-20){
-				var blockId = $(this).attr("id");
-				$(".navbar-collapse li a").removeClass("my-active");
-				$(".navbar-collapse li a[data-scroll='"+blockId+"']" ).addClass("my-active");
-				
-				
-			}
-            
-        });
-		
-		
-		
-		}); 
